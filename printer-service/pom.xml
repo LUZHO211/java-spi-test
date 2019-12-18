@@ -1,0 +1,70 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.pandaq</groupId>
+    <artifactId>printer-service</artifactId>
+    <version>1.1.5</version>
+    <packaging>jar</packaging>
+
+    <name>printer-service</name>
+
+    <properties>
+        <java_source_version>1.8</java_source_version>
+        <java_target_version>1.8</java_target_version>
+        <file_encoding>UTF-8</file_encoding>
+    </properties>
+
+    <dependencies>
+        <!-- SPI接口jar包依赖 -->
+        <dependency>
+            <groupId>com.pandaq</groupId>
+            <artifactId>printer-service-spi</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+        <!-- 引入佳能打印机设备服务 -->
+        <dependency>
+            <groupId>com.canon</groupId>
+            <artifactId>canon-printer</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+        <!-- 引入惠普打印机设备服务 -->
+        <dependency>
+            <groupId>com.hp</groupId>
+            <artifactId>hp-printer</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Java Compiler -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${java_source_version}</source>
+                    <target>${java_target_version}</target>
+                    <encoding>${file_encoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
