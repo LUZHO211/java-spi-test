@@ -1,0 +1,2 @@
+epson-v1 = com.epson.printer.EpsonV1Printer
+epson-v2 = com.epson.printer.EpsonV2Printer

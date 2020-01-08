@@ -2,26 +2,24 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.pandaq</groupId>
-    <artifactId>printer-service-spi</artifactId>
-    <version>1.1.0</version>
+    <groupId>com.epson</groupId>
+    <artifactId>dubbo-spi-epson-printer</artifactId>
+    <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>printer-service-spi</name>
+    <name>dubbo-spi-epson-printer</name>
 
     <properties>
         <java_source_version>1.8</java_source_version>
         <java_target_version>1.8</java_target_version>
         <file_encoding>UTF-8</file_encoding>
-        <dubbo.version>2.7.5</dubbo.version>
     </properties>
 
     <dependencies>
-        <!-- Dubbo依赖 -->
         <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo</artifactId>
-            <version>${dubbo.version}</version>
+            <groupId>com.pandaq</groupId>
+            <artifactId>printer-service-spi</artifactId>
+            <version>1.1.0</version>
         </dependency>
     </dependencies>
 
